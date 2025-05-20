@@ -13,7 +13,6 @@
           <a href="#que-es">¿Qué es ECMAScript?</a>
           <a href="#versiones">Versiones</a>
           <a href="#como-utilizar">¿Como se usa?</a>
-          <a href="#diferencias">Diferencias entre versiones</a>
         </nav>
     </header>
 
@@ -23,7 +22,181 @@
     <p>Este estándar es mantenido por una organización llamada ECMA International, y su propósito es proporcionar una base común que garantice la interoperabilidad entre distintos navegadores, servidores y dispositivos. En otras palabras, ECMAScript asegura que todos los entornos que ejecutan JavaScript sigan las mismas reglas básicas para interpretar el código.</p>
     </section>
 
-    
+    <section id="versiones">
+        <h2>Versiones de ECMAScript</h2>
+        <p>A lo largo de los años, ECMAScript ha tenido varias versiones que introdujeron nuevas características y mejoras. A continuación, se muestra un resumen de las versiones más importantes:</p>
+  
+        <table>
+
+          <thead>
+
+            <tr>
+              <th>Versión</th>
+              <th>Año</th>
+              <th>Características Clave</th>
+              <th>Relevante</th>
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>ES1</td>
+              <td>1997</td>
+              <td>Primera edición de ECMAScript.</td>
+              <td>Cimientos de ECMAScript</td>
+            </tr>
+
+            <tr>
+              <td>ES3</td>
+              <td>1999</td>
+              <td>
+                <ul>
+                    <li>Fue la versión que consolidó muchas de las bases del lenguaje, como la manipulación de cadenas, arrays, y objetos</li>
+                    <li>Definió muchas de las funciones que todavía usamos hoy, como Array.prototype.push() y String.prototype.slice()</li>
+                    <li>Introducción de las excepciones (try/catch)</li>
+                </ul>
+              </td>
+              <td>Estableció lo que es JavaScript hoy, pero no incluía características modernas como clases o funciones flecha</td>
+            </tr>
+
+            <tr>
+              <td>ES5</td>
+              <td>2009</td>
+              <td>
+                <ul>
+                    <li>Introducción del modo estricto (strict mode), que ayuda a evitar errores comunes y mejora la seguridad</li>
+                    <li>Nuevas funciones para trabajar con arrays, como Array.prototype.forEach(), Array.prototype.map(), Array.prototype.filter()</li>
+                    <li>Métodos como Object.defineProperty() para definir propiedades de objetos con configuraciones más precisas</li>
+                    <li>Object.create() para crear objetos de una manera más segura</li>
+                    <li>Mejoras en la manipulación de JSON, con JSON.parse() y JSON.stringify()</li>
+                </ul>
+              </td>
+              <td>Estableció nuevas formas de escribir código más seguro y limpio. Mejoró la seguridad y la eficiencia, pero aún carecía de muchas características modernas.</td>
+            </tr>
+
+            <tr>
+              <td>ES6 (ES2015)</td>
+              <td>2015</td>
+              <td>
+                <ul>
+                    <li>Introducción de clases en lugar de la función constructora tradicional</li>
+                    <li>Permite dividir el código en módulos para facilitar la reutilización y el mantenimiento</li>
+                    <li>let y const: Nuevas formas de declarar variables con alcance de bloque en lugar de var, lo que reduce errores de alcance</li>
+                    <li>Facilita la gestión de operaciones asincrónicas, haciendo que el código sea más legible</li>
+                    <li>Permite crear cadenas de texto con interpolación más fácil y legible (`Hola ${nombre}`)</li>
+                    <li>Permite extraer valores de arrays u objetos de manera más fácil (const [a, b] = arr)</li>
+                </ul>
+              </td>
+              <td>Fue una de las actualizaciones más grandes de ECMAScript, proporcionando herramientas más poderosas y un código más limpio y modular</td>
+            </tr>
+
+            <tr>
+              <td>ES7 (ES2016)</td>
+              <td>2016</td>
+              <td>
+                <ul>
+                    <li>Operador de exponenciación (**): Permite elevar un número a una potencia de manera más sencilla (2 ** 3 en lugar de Math.pow(2, 3))</li>
+                    <li>Array.prototype.includes(): Agrega una forma más fácil de comprobar si un array contiene un valor</li>
+                </ul>
+              </td>
+              <td>Aunque no fue tan grande como ES6, introdujo mejoras pequeñas pero útiles para trabajar con arrays y matemáticas</td>
+            </tr>
+
+            <tr>
+              <td>ES8 (ES2017)</td>
+              <td>2017</td>
+              <td>
+                <ul>
+                    <li>async y await: Proporciona una forma más sencilla y legible de trabajar con funciones asincrónicas, evitando el "callback hell" y haciendo el código más limpio y fácil de entender</li>
+                    <li>Object.entries() y Object.values(): Métodos para trabajar de forma más directa con los valores y las entradas de un objeto</li>
+                </ul>
+              </td>
+              <td>async/await fue una de las mayores mejoras en la forma de manejar tareas asincrónicas, permitiendo escribir código que parece síncrono pero que en realidad es asíncrono</td>
+            </tr>
+
+            <tr>
+              <td>ES9 (ES2018)</td>
+              <td>2018</td>
+              <td>
+                <ul>
+                    <li>Spread/rest operator en objetos: Ahora puedes usar el operador ... también con objetos para hacer copias o combinarlos</li>
+                    <li>Asincronía mejorada: Promise.finally() se agregó para que puedas ejecutar una acción una vez que una promesa se resuelva, sin importar si fue exitosa o fallida</li>
+                    <li>RegEx mejorado: Nuevas características para trabajar con expresiones regulares, como el flag s (dotAll) que permite que . también coincida con saltos de línea</li>
+                </ul>
+              </td>
+              <td>Mejoras en la asincronía y en el manejo de objetos y expresiones regulares</td>
+            </tr>
+
+            <tr>
+              <td>ES10 (ES2019)</td>
+              <td>2019</td>
+              <td>
+                <ul>
+                    <li>Array.prototype.flat() y Array.prototype.flatMap(): Métodos para aplanar arrays y manipular arrays de manera más eficiente</li>
+                    <li>Object.fromEntries(): Convierte un array de pares clave-valor en un objeto</li>
+                    <li>String.prototype.trimStart() y trimEnd(): Métodos para eliminar espacios al principio o al final de una cadena</li>
+                </ul>
+              </td>
+              <td>Aumentó las herramientas para trabajar con arrays y objetos, facilitando la manipulación de datos</td>
+            </tr>
+
+            <tr>
+              <td>ES11 (ES2020)</td>
+              <td>2020</td>
+              <td>
+                <ul>
+                    <li>Nullish coalescing (??): Un operador que devuelve el valor de la derecha solo si el valor de la izquierda es null o undefined</li>
+                    <li>Optional chaining (?.): Permite acceder a propiedades de objetos anidados de manera segura sin tener que verificar si el objeto intermedio existe</li>
+                    <li>BigInt: Tipo de datos para trabajar con números enteros muy grandes</li>
+                    <li>Promise.allSettled(): Permite manejar todas las promesas, independientemente de si se resuelven o rechazan</li>
+                </ul>
+              </td>
+              <td>Introdujo herramientas poderosas para manejar valores null o undefined y trabajar con grandes enteros (BigInt)</td>
+            </tr>
+
+            <tr>
+              <td>ES12 (ES2021)</td>
+              <td>2021</td>
+              <td>
+                <ul>
+                    <li>Método String.prototype.replaceAll(): Permite reemplazar todas las ocurrencias de una cadena en un texto</li>
+                    <li>Logical Assignment Operators: Nuevos operadores como &&=, ||=, y ??= para hacer asignaciones condicionales de manera más limpia</li>
+                </ul>
+              </td>
+              <td>Introdujo mejoras en la manipulación de cadenas y operadores lógicos más compactos</td>
+            </tr>
+
+            <tr>
+                <td>ES13 (ES2022)</td>
+                <td>2022</td>
+                <td>
+                  <ul>
+                      <li>Array.prototype.at(): Permite acceder a los elementos de un array con un índice negativo, similar a cómo lo hace Python. Esto facilita obtener el último elemento de un array, por ejemplo, con arr.at(-1)</li>
+                      <li>Object.hasOwn(): Una nueva forma más segura y clara de comprobar si un objeto tiene una propiedad propia. Reemplaza a Object.prototype.hasOwnProperty(), evitando posibles errores si se sobrescribe este método</li>
+                      <li>Top-level await: Permite usar await en el nivel superior de un módulo, sin necesidad de envolverlo en una función async. Esto mejora la legibilidad y simplifica el trabajo con código asincrónico en módulos</li>
+                  </ul>
+                </td>
+                <td>Array.prototype.at() y el Top-level await son las mejoras más destacadas, facilitando el trabajo con arrays y simplificando el código asincrónico</td>
+            </tr>
+
+            <tr>
+                <td>ES14 (ES2023)</td>
+                <td>2023</td>
+                <td>
+                  <ul>
+                      <li>Hashbang en archivos JavaScript: Permite el uso de #!/usr/bin/env node al principio de los archivos, una característica común en otros lenguajes de programación como Python. Esto hace que los archivos JavaScript se puedan ejecutar directamente desde la terminal sin necesidad de un comando explícito como node</li>
+                      <li>Array.prototype.toSorted(): Añade la capacidad de crear una versión ordenada de un array sin modificar el original. Es una forma inmutable de ordenar los elementos</li>
+                      <li>Method .at() para cadenas de texto (String.prototype.at()`): Así como en los arrays, ahora se puede acceder a caracteres dentro de una cadena utilizando índices negativos, lo cual facilita el trabajo con cadenas de texto</li>
+                </td>
+                <td>Mejoras para el control de la recolección de basura con WeakRefs y un enfoque más seguro y flexible para trabajar con arrays y cadenas, como Array.prototype.toSorted() y String.prototype.at()</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+    </section>
 
 </body>
 </html>
