@@ -38,8 +38,9 @@ header nav a {
     display: flex;
     flex-direction: column;
     padding: 4vw;
-    border: solid;
+    border: solid 0.5px;
     margin: 3vw;
+    align-items: center;
 }
 
 .quees h2 {
@@ -50,12 +51,13 @@ header nav a {
 
 .quees p {
     text-align: justify;
+    font-size: 2vw;
 }
 
 .versiones {
     display: flex;
     flex-direction: column;
-    padding: 4vw; 
+    padding: 4vw;
 }
 
 .versiones h2 {
@@ -67,6 +69,7 @@ header nav a {
 .versiones p {
     text-align: justify;
     margin-bottom: 4vw;
+    font-size: 2vw;
 }
 
 table {
