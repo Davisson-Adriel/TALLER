@@ -105,7 +105,9 @@ td {
 
 .como-utilizar ul {
     list-style: inside;
+    font-size: 2.5vw;
 }
+
 
 code, pre {
     display: flex;
