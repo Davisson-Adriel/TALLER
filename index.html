@@ -16,17 +16,18 @@
         </nav>
     </header>
 
-    <section id="que-es">
+    <section id="que-es" class="quees">
     <h2>¿Qué es ECMAScript?</h2>
-    <p>ECMAScript es un conjunto de normas que define cómo deben comportarse los lenguajes de programación como JavaScript. Es como un "manual de instrucciones" que asegura que el código funcione de manera consistente en todos los navegadores y entornos que lo soporten. Gracias a ECMAScript, se evita que el código tenga comportamientos inesperados cuando se ejecuta en diferentes plataformas</p>
+    <p>ECMAScript es un conjunto de normas que define cómo deben comportarse los lenguajes de programación como JavaScript. Es como un "manual de instrucciones" que asegura que el código funcione de manera consistente en todos los navegadores y entornos que lo soporten. Gracias a ECMAScript, se evita que el código tenga comportamientos inesperados cuando se ejecuta en diferentes plataformas.</p>
+    <br>
     <p>Este estándar es mantenido por una organización llamada ECMA International, y su propósito es proporcionar una base común que garantice la interoperabilidad entre distintos navegadores, servidores y dispositivos. En otras palabras, ECMAScript asegura que todos los entornos que ejecutan JavaScript sigan las mismas reglas básicas para interpretar el código.</p>
     </section>
 
-    <section id="versiones">
+    <section id="versiones" class="versiones">
         <h2>Versiones de ECMAScript</h2>
         <p>A lo largo de los años, ECMAScript ha tenido varias versiones que introdujeron nuevas características y mejoras. A continuación, se muestra un resumen de las versiones más importantes:</p>
   
-        <table>
+        <table border="1">
 
           <thead>
 
@@ -197,6 +198,111 @@
         </table>
 
     </section>
+
+    <section id="como-utilizar" class="como-utilizar">
+
+        <h2>¿Como se Usa?</h2>
+        <h3>Herramientas Previas</h3>
+        <ul>
+            <li>Navegador Moderno (Chrome, FIrefox, Edge o SAfari)</li>
+            <li>Editor de texto como VS code, Sublime o incluso un bloc de notas</li>
+        </ul>
+
+        <h3>Aprendizaje con ejemplos reales</h3>
+
+        <section>
+            <h3>1. let y const (ES6)</h3>
+            <pre><code>
+                    // Antes
+                var nombre = "Laura";
+                console.log(nombre);
+                
+                // Ahora
+                let nombre = "Laura";
+                const edad = 22;
+                console.log(`${nombre} tiene ${edad} años.`);
+            </code></pre>
+        </section>
+        
+        <section>
+            <h3>2. Funciones flecha (ES6)</h3>
+            <pre><code>
+                    // Antes
+                function saludar(nombre) {
+                return "Hola " + nombre;
+                }
+                
+                // Ahora
+                const saludar = (nombre) => `Hola ${nombre}`;
+                console.log(saludar("Pepe"));
+            </code></pre>
+        </section>
+        
+        <section>
+            <h3>3. async / await (ES8)</h3>
+            <pre><code>
+                // Antes: callbacks
+                setTimeout(function () {
+                console.log("Esperando...");
+                }, 2000);
+                
+                // Ahora: async/await
+                const esperar = () => new Promise(res => setTimeout(res, 2000));
+                
+                const cargar = async () => {
+                console.log("Cargando...");
+                await esperar();
+                console.log("Listo!");
+                };
+                
+                cargar();
+            </code></pre>
+        </section>
+        
+        <section>
+            <h3>4. Optional chaining y nullish coalescing (ES11)</h3>
+            <pre><code>
+                const persona = {};
+                
+                // Optional chaining
+                console.log(persona.direccion?.calle); // undefined sin error
+                
+                // Nullish coalescing
+                const apellido = null;
+                console.log(apellido ?? "Apellido no proporcionado");
+            </code></pre>
+        </section>
+        
+        <section>
+            <h3>5. Array.at() (ES13)</h3>
+            <pre><code>
+                const frutas = ["manzana", "pera", "uvas"];
+                
+                // Antes
+                console.log(frutas[frutas.length - 1]);
+                
+                // Ahora
+                console.log(frutas.at(-1)); // uvas
+            </code></pre>
+        </section>
+        
+        <section>
+            <h3>6. Array.toSorted() (ES14)</h3>
+            <pre><code>
+                const numeros = [5, 3, 9, 1];
+                
+                // Ordena sin modificar el array original
+                const ordenado = numeros.toSorted((a, b) => a - b);
+                console.log("Original:", numeros);  // [5, 3, 9, 1]
+                console.log("Ordenado:", ordenado); // [1, 3, 5, 9]
+            </code></pre>
+        </section>
+
+    </section>
+
+    <footer>
+        <h4>Davisson Adriel Roman Carreño</h4>
+    </footer>
 
 </body>
 </html>
